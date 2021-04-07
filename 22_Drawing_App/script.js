@@ -9,7 +9,8 @@ const ctx = canvas.getContext('2d')
 
 let size = 10
 let ispressed = false
-let color = 'black'
+colorEl.value = 'black'
+let color = colorEl.value
 let x
 let y
 
@@ -28,7 +29,7 @@ canvas.addEventListener('mouseup', (e) => {
 })
 
 canvas.addEventListener('mousemove', (e) => {
-  if (isPressed) {
+  if (ispressed) {
     const x2 = e.offsetX
     const y2 = e.offsetY
 
